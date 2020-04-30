@@ -1,0 +1,44 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<h2>Product Details</h2>
+
+
+
+
+  <button type="submit"  (click)=gets()>Get</button>&nbsp;&nbsp;&nbsp;
+<button type="submit"(click)=posts() >Post</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=puts()>Put</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=deletes()>Delete</button>&nbsp;&nbsp;&nbsp;
+<table class="table">
+             
+  <thead>
+    <tr>
+      <th scope="col">ProductName</th>
+      <th scope="col">Price</th>
+      <th scope="col">Manufacture-Date</th>
+      <th scope="col">Expiry-Date</th>
+      <th scope="col">Barcode</th>
+     
+      
+    </tr>
+  </thead>
+   
+  <tbody >
+    <tr *ngFor="let item of response">
+      <th scope="row">{{item.PrdName}}</th>
+      <td >{{item.PrdPrice}}</td>
+      <td>{{item.Manu}}</td>
+      <td>{{item.Exp}}</td>
+      <td>{{item.Barcode}}</td>
+     
+     
+    </tr>
+  
+</table>

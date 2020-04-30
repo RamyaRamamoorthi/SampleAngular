@@ -1,0 +1,50 @@
+
+
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<h2>Student Details</h2>
+
+
+
+
+  <button type="submit"  (click)=gets()>Get</button>&nbsp;&nbsp;&nbsp;
+<button type="submit"(click)=posts() >Post</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=puts()>Put</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=deletes()>Delete</button>&nbsp;&nbsp;&nbsp;
+<table class="table">
+             
+    <thead>
+      <tr>
+        <th scope="col">StudentID</th>
+        <th scope="col">StudentName</th>
+        <th scope="col">StudentGrade</th>
+        <th scope="col">Course</th>
+        <th scope="col">Address</th>
+        <th scope="col">PhNumber</th>
+        
+      </tr>
+    </thead>
+     
+    <tbody *ngFor="let item of response">
+      <tr>
+        <th scope="row">{{item.sid}}</th>
+        <td >{{item.StudentName}}</td>
+        <td>{{item.StudentGrade}}</td>
+        <td>{{item.Course}}</td>
+        <td>{{item.Address}}</td>
+        <td>{{item.PhoeNumber}}</td>
+        
+       
+      </tr>
+    
+  </table>
+ 
+
